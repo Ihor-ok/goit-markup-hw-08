@@ -47,17 +47,50 @@
   }
 }
 
-// .header-logo:focus,
-// .header-logo:hover {
-//   color: var(--accent-color);
-// }
-
 .header__logo--web {
   color: var(--accent-color);
 }
 
 .header a {
   color: var(--primary-text-color);
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  background-color: palegoldenrod;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+
+  &.is-open {
+    display: block;
+  }
 }
 
 .header__container {
@@ -67,7 +100,7 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
-    justify-content: center;
+    align-items: center;
 
     // width: 100%;
   }
@@ -97,19 +130,6 @@
   }
 }
 
-// .header-site-nav .item + .item {
-//   margin-left: 50px;
-// }
-
-// .header-site-nav a {
-//   color: var(--primary-text-color);
-
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.5;
-//   letter-spacing: 0.02em;
-// }
-
 .auth-nav {
   // & .item + .item {
   //   margin-left: 30px;
@@ -125,7 +145,7 @@
 
   @media screen and (min-width: 768px) {
     display: block;
-    margin-left: 70px;
+    margin-left: 80px;
     font-size: 12px;
     line-height: 1.16;
   }
@@ -147,19 +167,6 @@
   }
 }
 
-// .header-auth-nav .item + .item {
-//   margin-left: 30px;
-// }
-
-// .header-auth-nav a {
-//   color: var(--title-text-color);
-
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.5;
-//   letter-spacing: 0.02em;
-// }
-
 .site-nav__stydio.current {
   color: var(--accent-color);
 
@@ -175,18 +182,6 @@
     top: 76px;
   }
 }
-
-// .header-stydio.current::after {
-//   content: "";
-//   width: 48px;
-//   height: 4px;
-//   background-size: contain;
-//   background: #2196f3;
-//   border-radius: 2px;
-//   display: block;
-//   position: absolute;
-//   top: 76px;
-// }
 
 .site-nav__portfolio.current {
   color: var(--accent-color);
@@ -204,18 +199,6 @@
   }
 }
 
-// .header-portfolio.current::after {
-//   content: "";
-//   width: 78px;
-//   height: 4px;
-//   background-size: contain;
-//   background: #2196f3;
-//   border-radius: 2px;
-//   display: block;
-//   position: absolute;
-//   top: 76px;
-// }
-
 .nav {
   transition-property: color, fill;
   transition-duration: 250ms;
@@ -228,16 +211,14 @@
   }
 }
 
-// .nav:hover,
-// .nav:focus {
-//   color: var(--accent-color);
-//   fill: var(--accent-color);
-// }
-
 .auth-nav__mail {
   display: flex;
   align-items: center;
   fill: var(--title-text-color);
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+  }
 }
 
 .auth-nav__mail-icon {
