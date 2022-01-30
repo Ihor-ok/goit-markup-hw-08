@@ -1,4 +1,5 @@
 .header {
+  margin: 0 auto;
   background-color: var(--wite-color);
   border-bottom: 1px solid #ececec;
   /* height: 80px; */
@@ -124,7 +125,7 @@
 
   @media screen and (min-width: 768px) {
     display: block;
-    margin-left: 84px;
+    margin-left: 70px;
     font-size: 12px;
     line-height: 1.16;
   }

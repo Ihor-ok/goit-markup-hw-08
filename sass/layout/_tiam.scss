@@ -1,51 +1,13 @@
-.tiam-list__card {
-  // width: 100%;
-  background: #ffffff;
-
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-  margin-bottom: 30px;
-
-  @media screen and (min-width: 480px) {
-    width: 100%;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 354px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 270px;
-  }
-}
-
 .tiam {
   background-color: var(--background-team-color);
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-.tiam-list {
-  // display: flex;
-  // padding-left: 0;
-
-  // & .item + .item {
-  //   margin-left: 30px;
-  // }
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    // width: calc(100% - 4 * 15) / 2;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
-
-// .tiam-list .item + .item {
-//   margin-left: 30px;
-// }
 
 .tiam__title {
   color: var(--primary-text-color);
@@ -53,16 +15,59 @@
   margin-bottom: 50px;
 
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
 
-  @media screen and (max-width: 1200px) {
-    font-size: 28px;
-    line-height: 1.17;
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
   }
 }
+
+.tiam-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: -30px;
+  }
+}
+
+.tiam-list__card {
+  background: #ffffff;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:last-child) {
+    @media screen and (max-width: 480px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 4 * 30px) / 4);
+    margin-right: 30px;
+  }
+}
+
+// .tiam-list__card:not(:last-child) {
+//   @media screen and (min-width: 480px) {
+//     margin-bottom: 30px;
+//   }
+// }
 
 .tiam-list__wrap {
   padding-top: 30px;
@@ -78,7 +83,7 @@
 
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.18;
   letter-spacing: 0.03em;
 }
 
@@ -89,7 +94,7 @@
   text-align: center;
 
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.18;
   letter-spacing: 0.03em;
   margin-bottom: 16px;
 }
@@ -107,10 +112,6 @@
     margin-left: 10px;
   }
 }
-
-// .tiam-social-item + .tiam-social-item {
-//   margin-left: 10px;
-// }
 
 .tiam-social-list__link {
   width: 100%;
@@ -132,9 +133,3 @@
     fill: var(--wite-color);
   }
 }
-
-// .tiam-social-link:hover,
-// .tiam-social-link:focus {
-//   background-color: var(--accent-color);
-//   fill: var(--wite-color);
-// }

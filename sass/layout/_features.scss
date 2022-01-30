@@ -1,62 +1,65 @@
 .features {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @media screen and (min-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 93px;
+    padding-bottom: 93px;
+  }
 }
 
-// .features-container {
-//   display: block;
-//   margin: 0 auto;
-// }
-
 .features-list {
-  margin-bottom: -30px;
+  @media screen and (max-width: 480px) {
+    margin-bottom: -30px;
+  }
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    margin-right: -30px;
+  }
+}
+
+.features-list__description {
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin-right: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 4 * 30px) / 4);
+    // margin-right: 30px;
   }
 }
 
 .features-list__wrap {
   display: flex;
-  justify-content: center;
+
   align-items: center;
-  width: 100%;
-  height: 120px;
-  left: 215px;
-  top: 774px;
+
+  justify-content: center;
+  // margin: 0 auto;
+
+  // width: 270px;
+  // height: 120px;
 
   background: #f5f4fa;
   border-radius: 4px;
 
   margin-bottom: 30px;
-  margin-right: auto;
-  margin-left: auto;
 
-  &:hover {
-    border: 2px solid var(--accent-color);
+  @media screen and (min-width: 480px) {
+    padding: 25px 191px;
   }
 
   @media screen and (min-width: 768px) {
-    width: 354px;
+    padding: 25px 144px;
   }
-
-  @media screen and (min-width: 1200px) {
-    width: 270px;
-  }
-}
-
-.features-list__description {
-  margin-left: auto;
-  margin-right: auto;
 
   @media screen and (min-width: 768px) {
-    width: 354px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 270px;
+    padding: 25px 102px;
   }
 }
 
@@ -71,24 +74,23 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  text-align: center;
+
+  @media screen and (max-width: 480px) {
+    text-align: center;
+  }
 }
 
 .features-list__title {
   color: var(--title-text-color);
-  margin-top: 0;
-  margin-bottom: 30px;
+  // margin-top: 0;
+  // margin-bottom: 0;
 
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-}
 
-.features-list__antenna-icon:hover,
-.features-list__clock-icon:hover,
-.features-list__diagram-icon:hover,
-.features-list__astronaut-icon:hover {
-  stroke: var(--accent-color);
-  stroke-width: 0.3px;
+  @media screen and (max-width: 480px) {
+    margin-bottom: 30px;
+  }
 }
