@@ -728,7 +728,7 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .tiam-list__card:not(:last-child) {
     margin-bottom: 30px;
   }
