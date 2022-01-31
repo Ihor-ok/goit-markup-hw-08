@@ -37,10 +37,10 @@
     color: var(--accent-color);
   }
 
-  // @media screen and (min-width: 768px) {
-  //   margin-right: 88px;
-  //   font-size: 24px;
-  // }
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+    font-size: 24px;
+  }
 
   @media screen and (min-width: 1200px) {
     margin-right: 93px;
@@ -72,9 +72,9 @@
   border: none;
   background-color: transparent;
   z-index: 3;
-  position: fixed;
-  top: -3px;
-  right: 0;
+  // position: fixed;
+  // top: -3px;
+  // right: 20px;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -93,6 +93,21 @@
   display: none;
 }
 
+.menu-button.is-fixed {
+  position: fixed;
+  top: 10px;
+  right: 30px;
+}
+
+.menu-container {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+}
+
 .menu-container {
   // display: none;
   // padding: 20px;
@@ -100,16 +115,18 @@
   // font-size: 20px;
 
   &.is-open {
-    body {
-      overflow: hidden;
-    }
     display: block;
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+    }
   }
 
   @media screen and (max-width: 767px) {
     display: none;
     background-color: white;
-    position: fixed;
     top: 0;
     right: 0;
     width: 100vw;
@@ -129,8 +146,8 @@
   @media screen and (max-width: 767px) {
     flex-wrap: wrap;
     margin-bottom: -35px;
-    // padding-left: 40px;
-    // padding-right: 248px;
+    position: absolute;
+    top: 48px;
   }
 }
 
@@ -199,6 +216,11 @@
     letter-spacing: 0.02em;
   }
 
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
   @media screen and (min-width: 768px) {
     display: block;
     margin-left: 80px;
@@ -224,6 +246,10 @@
 }
 
 .site-nav__stydio.current {
+  @media screen and (max-width: 768px) {
+    color: var(--accent-color);
+  }
+
   @media screen and (min-width: 768px) {
     color: var(--accent-color);
 
@@ -242,6 +268,10 @@
 }
 
 .site-nav__portfolio.current {
+  @media screen and (max-width: 768px) {
+    color: var(--accent-color);
+  }
+
   @media screen and (min-width: 768px) {
     color: var(--accent-color);
 
@@ -326,7 +356,7 @@
 
 .auth-nav__mail {
   @media screen and (max-width: 767px) {
-    margin-top: 302px;
+    margin-top: 32px;
     margin-bottom: 32px;
   }
 }
@@ -341,9 +371,10 @@
 .social-net-list {
   @media screen and (max-width: 767px) {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-top: 64px;
     padding-left: 40px;
+    padding-bottom: 48px;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.2;
