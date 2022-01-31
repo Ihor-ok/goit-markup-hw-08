@@ -71,6 +71,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  z-index: 3;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -91,6 +92,13 @@
 
 .menu-container {
   background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
 
   // display: none;
   // padding: 20px;
@@ -98,16 +106,14 @@
   // font-size: 20px;
 
   &.is-open {
+    body {
+      overflow: hidden;
+    }
     display: block;
   }
 
   @media screen and (max-width: 767px) {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 480px;
-    height: 796px;
   }
 
   @media screen and (min-width: 768px) {
