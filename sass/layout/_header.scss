@@ -5,6 +5,8 @@
   /* height: 80px; */
 
   position: relative;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   @media screen and (min-width: 768px) {
     padding-top: 21px;
@@ -379,7 +381,7 @@
 .social-net-list {
   @media screen and (max-width: 767px) {
     display: flex;
-    justify-content: space-evenly;
+
     padding-top: 64px;
     padding-left: 40px;
     padding-bottom: 48px;
@@ -390,15 +392,23 @@
   }
 }
 
-.social-net a {
+.social-item:not(:last-child)::after {
   @media screen and (max-width: 767px) {
-    margin-right: 20px;
-    color: #2196f3;
+    content: " ";
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+  }
+}
+
+.social-item:not(:first-child) {
+  @media screen and (max-width: 767px) {
+    margin-left: 10px;
   }
 }
 
 .social-net-list a {
   @media screen and (max-width: 767px) {
+    margin-right: 10px;
     color: #2196f3;
   }
 }

@@ -92,6 +92,8 @@ body {
   border-bottom: 1px solid #ececec;
   /* height: 80px; */
   position: relative;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -468,7 +470,6 @@ body {
 @media screen and (max-width: 767px) {
   .social-net-list {
     display: flex;
-    justify-content: space-evenly;
     padding-top: 64px;
     padding-left: 40px;
     padding-bottom: 48px;
@@ -480,14 +481,22 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .social-net a {
-    margin-right: 20px;
-    color: #2196f3;
+  .social-item:not(:last-child)::after {
+    content: " ";
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .social-item:not(:first-child) {
+    margin-left: 10px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .social-net-list a {
+    margin-right: 10px;
     color: #2196f3;
   }
 }
