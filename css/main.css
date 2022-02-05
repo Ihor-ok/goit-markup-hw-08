@@ -508,6 +508,8 @@ body {
 }
 
 .hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: chocolate;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/index-images/bg-mobile.jpg);
   background-repeat: no-repeat;
@@ -543,13 +545,6 @@ body {
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/index-images/bg-desktop@2x.jpg);
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .hero {
-    padding-top: 118px;
-    padding-bottom: 118px;
   }
 }
 
@@ -619,11 +614,9 @@ body {
   color: var(--primary-text-color);
 }
 
-@media screen and (min-width: 480px) {
-  .features {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+.features {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
